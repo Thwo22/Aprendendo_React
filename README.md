@@ -66,4 +66,32 @@ Arquivos que Você PODE APAGAR ou Modificar (Conteúdo Exemplo/Configurações I
 
     README.md: Este é um arquivo de documentação. Você pode apagar todo o seu conteúdo e escrever sua própria documentação para o projeto. É uma boa prática mantê-lo, mas não essencial para o funcionamento do código.
 
+Agora, antes de colocarmo em prática a nossa programação Utilizando a biblioteca React, devemos aprender mais sobre o que é JSX e como ele é usado pelo React.
 
+JSX é um recurso muito utilizado pelo React, Ele é como o HTML, voce pode abrir e fechar tags, mas com algumas diferenças. Pois é como se voce estivesse escrevendo seu código HTML dentro do Javascript (que é a linguagem que o react é nativamente Programado). Atráves do JSX, nós podemos interpolar variaveis inserindo elas entre {} de uma forma té que parecida com o JS comum, MAS sem os "$". Também é possível executar funções em JSX que na maioria das vezes será usada para afetar a interface do usuário com mudanças a partir da interatividade dele com a página. Além disso, para estilização, assim como o html comum, você pode usar atributos de tags como ID´s e Classes. Porém, com algumas diferenças de Sintaxe já que estamos tratando esse código dentro de um Javascript por trás do panos.
+
+Outro assunto muito importante antes de começar a Desenvolver em React, é ter uma noção do qu são Componentes em React, para que eles servem e qual a importância deles dentro do código?
+
+-O que são Componentes?
+
+Um componente em React é como um pequeno bloco dentro da sua página, ele pode ser um container, um botão, um título ou qualquer outra coisa, o importante é saber que em react você precisa saber estruturar esses blocos para construir a sua aplicação. De forma mais simples, é como se um componente fosse uma peça de lego. Cada peça tem a sua função, e se voce souber juntar todas as peças e encaixa-las de uma forma inteligente, pode construir um monumento legal.
+
+Nos arquivos do nosso projeto React que instalamos, é possivel ver um chamado App.jsx, e esse arquivo já é um componente! o Primeiro Componente padrão do nosso site. Ele é o componente raiz (ou componente pai) da nossa aplicação, ou seja, ele é o responsavel por exibir o que colocamos nele na tela do navegador. No começo ele nao tem muita coisa, mas com o tempo, nós temos que criar cada componente de forma separada em diferentes arquivos (geralmente dentro de uma pasta chamada components) e ir importando pra dentro do nosso Componente pai, que vai mostrar essas coisas que fizemos para o cliente. Resumindo, é como se o react fosse um grande quebra-cabeça, onde todas as peças sao feitas separadamente e encaixadas no final, formando um layout.
+
+Mas como juntar todos esses componentes se eles estão em aquivos diferentes? 
+
+Sempre que voce criar um novo componente da sua aplicação, é importante voce exportar esse mesmo componente pro seu componente pai (q geralmente é o App.jsx). para fzaer isso, no arquivo do componente que voce criou, na ultima linha, escreva: 
+
+"export default componente-filho" (nome de exemplificação)
+
+e no componente pai, para importar esse componente para dentro dele, no topo do arquivo escreva:
+
+"import componente-filho from "local/do/arquivo"; "
+
+PRONTO! agora seu componente ja esta importado pra dentro do componente pai, voce so precisa usar ele, e é simples.
+
+para colocar o seu comonente na tela, basta escolher um local onde ele ficará na pagina dentro do seu "Estrtura HTML" que na verdade é um JSX e escreva o nome do seu componente como se fosse um tag. exemplo: 
+
+"<componente-filho/>"
+
+Qual a praticidade disso? bom, é muito muito util, principalmente quando se fala em reutilização de componentes, ja que voce nao precisa reescrevdo o mesmo componente 200 vezes, voce só usa o que voce ja criou reescrevendo a tag e se quiser, pode fazer alterações individuais nele. Componentes tambem sao otimos em contexto de projetos escalaveis, resolução pratica de bugs e re-estilização ou modificação, nao precisando mudar todo o layout ou a pagina inteira, e sim somente o componente em especifico.

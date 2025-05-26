@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(56, 56, 56);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     justify-content: center;
     background-color: rgb(70, 70, 70);
     width: 300px;
-    height: 300px;
+    height: 450px;
     padding: 10px;
     border-radius: 8px;
     
@@ -22,7 +22,6 @@ body {
 }
 h1 {
     text-align: center;
-    background-color: brown;
     text-align: center;
 }
 .paragrafo {
@@ -31,16 +30,7 @@ h1 {
     text-align: center;
 }
 
-.btn-action {
-    all: unset;
-    background-color: brown;
-    height: 50px;
-    width: 150px;
-    border-radius: 8px;
-    cursor: pointer;
-
-    text-align: center;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
+.xaropinho-img {
+    width: 100px;
+    height: 100px;
 }
