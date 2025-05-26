@@ -1,4 +1,5 @@
-html, body {
+body {
+    background-color: white;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -28,4 +29,18 @@ h1 {
 
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+.btn-action {
+    all: unset;
+    background-color: brown;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
