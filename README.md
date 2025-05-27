@@ -95,3 +95,9 @@ para colocar o seu comonente na tela, basta escolher um local onde ele ficará n
 "<componente-filho/>"
 
 Qual a praticidade disso? bom, é muito muito util, principalmente quando se fala em reutilização de componentes, ja que voce nao precisa reescrevdo o mesmo componente 200 vezes, voce só usa o que voce ja criou reescrevendo a tag e se quiser, pode fazer alterações individuais nele. Componentes tambem sao otimos em contexto de projetos escalaveis, resolução pratica de bugs e re-estilização ou modificação, nao precisando mudar todo o layout ou a pagina inteira, e sim somente o componente em especifico.
+
+Agora, tendo conhecimento dessa parte do React, vamos entender um pouco mais sobre uma peça fundamental do React. Responsavel por dar mais vida e interatividade aos componentes, tornando-os de componentes estáticos para componentes Dinâmincos, Os Props. 
+
+O QUE SÃO OS PROPS? 
+
+Props sao propriedades impostas em um componente filho, é como se ele abrisse uma variavel em seu componente, onde o componente pai, importando ele, pode controlas os valores que irão ser armazenados nesse espaço. Um componente filho nao pode criar um valor por conta propria dentro de um prop e passar pro pai.

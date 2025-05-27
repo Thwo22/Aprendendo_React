@@ -1,22 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import HelloWorld from './components/helloWorld';
+import SayMyName from "./components/SayMyName.1";
+import Pessoa from './components/pessoa';
 
 function App() {
-  
-  const name = "Thiago";
 
-  const imagemRatinho = "https://t2.tudocdn.net/614041?w=824&h=494"
-
+  const nomeFeminino = "maria";
   return (
     <>
-      <HelloWorld/>
-      <div className="container">
-        <h1>Olá, {name}, este é  seu Mundo!</h1>
-        <h2>alterando jsx</h2>
-        <p className='paragrafo'>testando como funciona o componente basico do react</p>
-        <img className="xaropinho-img" src={imagemRatinho} alt="Imagem do Xaropinho"/>
-      </div>
+      <SayMyName nome="Thiago"/>
+      <SayMyName nome={nomeFeminino}/>
+      <Pessoa nome="Thiago" idade="18 anos" profissao="Desenvolvedor Web" foto="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-GgSPYmslH8mRKnXcBJkcg4F5KGE1zQxKnA&s"/>
     </>
   )
 }
