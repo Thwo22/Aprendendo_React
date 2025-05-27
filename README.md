@@ -101,3 +101,29 @@ Agora, tendo conhecimento dessa parte do React, vamos entender um pouco mais sob
 O QUE SÃO OS PROPS? 
 
 Props sao propriedades impostas em um componente filho, é como se ele abrisse uma variavel em seu componente, onde o componente pai, importando ele, pode controlas os valores que irão ser armazenados nesse espaço. Um componente filho nao pode criar um valor por conta propria dentro de um prop e passar pro pai.
+
+Agora que voce tem uma página já estruturada em React, chegamos na parte de ESstilizar ela, Vamos colocar em prática o Css que ja tivemos contato antes com o HTML básico. Mas agora, ao react, há algumas mudanças importantes que devemos nos atentar pra conseguir usar da melhor maneira. 
+
+A primeira é que, se voce deseja fazer estilizxações globnais na sua página, como cor de fundo, tipografria, margin, padding, etc, melhor seria voce estilizar em css usando o arquivo ja existe (geralemnte chamado de index.css) que ja vem instalado junto com as dependências do seu projeto. 
+
+Mas e quando o assunto é estilizar Componentes em especifico? o que fazemos? o index apenas altera as tags localizadas no componente pai, entao como fazermos essa aplicação mais específica?
+
+Para isso, usamos os CSS MODULES, nele nós podemos fazer estilizações em arquivos jsx (ou simplesmente js) dos nossos componentes individuais. Primeiro voce cria uma pagina.css (opte sempre por usar o nome do seu componente com ".modules.css") exemplo:
+
+"componenteFilho.component.css"
+
+e agora que voce tem a pagina criada, voce so precisa importar ela para o arquivo jsx especifico no qual pretende estilizar. Mas atenção! Importar um arquivo CSS nao é a mesma coisa que importar um arquivo jsx como ja aprendemos antes, ele na verdade deve ser escrito de outra forma: 
+
+No topo do seu site, escreva: 
+
+import styles from "./componenteFilho.modules.css"
+
+e agora que voce ja importou a página, vamos começar a estilização.  
+
+Para estilizar tags como divs, paragrafos, etc, voce ja deve saber que geralmente usamos identificadores como Class ou ID´s. Bom, isso tambem muda no Reac, porque, para colocar esses identificadores no nosso JSX. fazemos da seguinte forma: 
+
+"<div className={styles.container}></div>"
+
+ou seja, alem do className no lugar de somente Class, devemos usar {styles.O_NOME_DA_TAG_QUE_QUEREMOS_PERSONALIZAR}
+
+E lemebrando, nunca com -, use somente camelCase ou _
