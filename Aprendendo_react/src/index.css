@@ -6,7 +6,8 @@ body {
 }
 
 .container {
-  margin: auto;
+  
+  padding-bottom: 500px;
 }
 
 h1 {
