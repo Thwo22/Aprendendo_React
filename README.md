@@ -159,3 +159,23 @@ nomeIdade.propTypes = {
 OBS: para que toda essa funcionalidade funcione, é preciso baixar o pacote de prop-types no seu projeto. Basta abrir o terminal do seu projeto e digitar: 
 
 npm install prop-types
+
+EVENTOS NO REACT. 
+
+Lá no HTML, Usei bastante eventos de Botoões como o onClick, onSubmit e outros, o mesmo é possível no React. Você pode criar botoes que disparam eventos dentro de funções de componentes, seja ele para alertar algo na tela, enviar um dado para o bando de dados, mudar o DOM da página, etc... Nessa ferramente existe uma boa diversidade de ações possíveis.
+
+exemplo:
+
+function componenteFilho {
+
+    function meuEvento() {
+        alert("Evento Disparado!")
+    }
+
+    return(
+        <button onClick={meuEvento}>
+    )
+}
+
+entre outros, É exatamente como no HTML, mas com as importações do React e algumas outras regrinhas de props
+
