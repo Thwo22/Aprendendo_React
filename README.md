@@ -127,3 +127,35 @@ Para estilizar tags como divs, paragrafos, etc, voce ja deve saber que geralment
 ou seja, alem do className no lugar de somente Class, devemos usar {styles.O_NOME_DA_TAG_QUE_QUEREMOS_PERSONALIZAR}
 
 E lemebrando, nunca com -, use somente camelCase ou _
+
+FRAGMENTS EM REACT.
+
+Se a esse ponto voce já comecou a estruturar páginas simples com o conhecimento escrito até agora, talvez vocé tenha notado com a grande quatidade de divs usadas em um projeto React, já que uma das principais regras da biblioteca é que tudo deve sempre estar estrururado dentro de caixas. Mas no HTML, é nitido que excesso é um tanto exagerado e pode acabar deixando o arquivo sujo e de dificíl leitura. 
+
+Essa é a pricipal função dos FRAGMENTS, eles servem para que voce possa passar elementos filhos para o container PAI sem ter que enviar uma div inteira junto, apenas o conteúdo em si, geralmente elementos mais simples como um parágrafo, listas, etc...
+
+Para criar um fragment, ao invés de usar uma div para o seu componente filho, escreva apenas "<> </>" que é como se fosse uma "caixa-transparente", escreva todo o conteudo que voce quer que seja importado para o Componente pai sem que precise de uma div.
+
+PROPTYPES
+
+Voltando um pouco atrás, vamos falar sobre algumas coisas mais avançadas dos props, ja que são um elemento essencial do React. Os PropTypes são responsaveis por definir dentro do componente, o TIPO DE DADO que esta sendo passado, e o TIPO DE DADO que a prop "exige". Dessa forma, voce pode construir um algoritmo mais completo e eficiente, como também pode te ajudar em resolver bugs e tambem para trabalho em equipe, já que definindo um proptype, voce ajuda o proximo a entender melhor  intenção da prop.
+
+Para voce poder definir isso, basta que, em uma função de um componente filho, voce faça:
+
+Function nomeIdade ({nome, idade}) {
+    return (
+        <h1> olá {nome}, voce tem {idade}, correto?
+    )
+}
+
+nomeIdade.propTypes = {
+    nome: PropTypes.string.isRequired,
+    idade: PropTypes.number,
+}
+
+// PropTypes.string.isRequired --> 
+//isRequired --> Obrigatóriamente o dado passado precise ser um numero para que funcione corretamente.
+
+OBS: para que toda essa funcionalidade funcione, é preciso baixar o pacote de prop-types no seu projeto. Basta abrir o terminal do seu projeto e digitar: 
+
+npm install prop-types
