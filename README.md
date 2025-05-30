@@ -144,7 +144,7 @@ Para voce poder definir isso, basta que, em uma função de um componente filho,
 
 Function nomeIdade ({nome, idade}) {
     return (
-        <h1> olá {nome}, voce tem {idade}, correto?
+        //<titulo> olá {nome}, voce tem {idade}, correto?</titulo>
     )
 }
 
@@ -153,7 +153,7 @@ nomeIdade.propTypes = {
     idade: PropTypes.number,
 }
 
-// PropTypes.string.isRequired --> 
+// PropTypes.string --> O tipo do dado dessa prop é uma String
 //isRequired --> Obrigatóriamente o dado passado precise ser um numero para que funcione corretamente.
 
 OBS: para que toda essa funcionalidade funcione, é preciso baixar o pacote de prop-types no seu projeto. Basta abrir o terminal do seu projeto e digitar: 
@@ -177,5 +177,59 @@ function componenteFilho {
     )
 }
 
-entre outros, É exatamente como no HTML, mas com as importações do React e algumas outras regrinhas de props
+entre outros, É exatamente como no HTML, mas com as importações do React e algumas outras regrinhas de props.
 
+USE STATE
+
+o useState é um importante método hook do react, ele é responsável por fazer as manipulações de dados, assim como tambem poder modifica-los dentro de um algoritmo. Seu uso é  de extrema importância e pode facilitar muito a vida do desenvolvedor quando usado de forma eficiente. 
+
+Vamos supor que voce tenha dois campos de input um onde o usuario vai escrever o nome dele (tipo text) e um inputr onde o usuario vai definir uma senha (tipo password) e um botao com a function de cadastrar ele.
+
+voce teria que fazer da seguinte forma:
+
+<div>
+
+    import { useState } from "react" --> importar o HOOK da pasta react
+
+    function container_de_cadastro {
+
+        function cadastrar (e) {
+            console.log(`o suario ${name} foi cadastrado usando a senha ${password}`)
+        }
+
+        const = [name, setName] = useState() 
+        const = [password, serPassword] = useState()
+
+    // name --> nome da variavel padrão
+    // setName --> responsável por receber as alterações e envia para a varivel padrão, atualizando-a
+    // useState --> responsável pelo método todo
+
+        return (
+            <form onSubmit={cadastrar}> --> ao clicar no input de tipo submit vai disparar a função de cadastrar, enviando os dados dos inputs para a função
+            <div>
+                <label htmlfor="nome">Nome:</label> --> "htmlfor" substitui o "for" do html padrão
+                <input 
+                    type="text"  --> tipo da tag
+                    id="name"    --> id da tag
+                    name="name"  --> name para se conectar a label
+                    placeholder="Digite seu nome"> --> conteudo transparente dentro do input
+                    onChange={(e) => useState(name.targe.value)} --> toda mudança que ocorrer dentro do input sera contabilizado dentro da variavel setName, modificando seu valor original
+                </input>
+
+                <label htmlfor="password">Nome:</label> --> "htmlfor" substitui o "for" do html padrão
+                <input 
+                    type= "password"  --> tipo da tag
+                    id="password"    --> id da tag
+                    name="password"  --> name para se conectar a label
+                    placeholder="Digite sua senha"> --> conteudo transparente dentro do input
+                    onChange={(e) => useState(password.targe.value)} --> toda mudança que ocorrer dentro do input sera contabilizado dentro da variavel setName, modificando seu valor original
+                </input>
+            </div>
+
+            <div>
+                <input type="submit">Enviar</input> --> ao ser clicado dispara a função de cadastrar, enviando os dados dos inputs para a função
+            </div>
+        ) 
+    }
+
+</div>
